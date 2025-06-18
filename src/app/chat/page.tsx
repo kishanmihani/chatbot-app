@@ -90,11 +90,11 @@ export default function ChatPage() {
           />
           <List>
             {users.map((user, idx) => (
-              <ListItem
+              <div
   key={idx}
   
-  component="li" // <- this is the missing required prop
-  selected={idx === 1}
+  // component="li" // <- this is the missing required prop
+  // selected={idx === 1}
 >
   <ListItemAvatar>
     <Avatar src={user.avatar} />
@@ -103,7 +103,7 @@ export default function ChatPage() {
   {user.unread && (
     <Box component="span" bgcolor="red" borderRadius="50%" width={10} height={10} />
   )}
-</ListItem>
+</div>
             ))}
           </List>
         </Box>
